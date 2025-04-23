@@ -31,3 +31,5 @@ O script irá exibir a cotação do Bitcoin em diversas moedas.
 - requests (instalado com `requirements.txt`)
 - python-dotenv (instalado com `requirements.txt`)
 
+
+
