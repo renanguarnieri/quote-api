@@ -20,16 +20,17 @@ Projeto em Python que consulta a cotação do Bitcoin (BTC) em diversas moedas u
 3. Execute o script principal:
 
     ```bash
-    python __init__.py
+    python main.py
     ```
 
-O script irá exibir a cotação do Bitcoin em diversas moedas.
+O script irá exibir a cotação do Bitcoin em Real, Dólar e Euro.
 
 ## Requisitos
 
 - Python 3.8 ou superior
 - requests (instalado com `requirements.txt`)
 - python-dotenv (instalado com `requirements.txt`)
+- pandas (instalado com `requirements.txt`)
 
 
 

@@ -1,13 +1,15 @@
 import requests
 from dotenv import load_dotenv
 import os
+import pandas as pd
 
 load_dotenv()
 api_key = os.getenv("API_KEY")
 
 
-def consultar_cotacao(asset_id_base):
-    url = f"https://rest.coinapi.io/v1/exchangerate/{asset_id_base}"
+
+def consultar_cotacao(asset_id_base,quote):
+    url = f"https://rest.coinapi.io/v1/exchangerate/{asset_id_base}/{quote}"
 
     payload = {}
     headers = {
@@ -15,6 +17,18 @@ def consultar_cotacao(asset_id_base):
     'X-CoinAPI-Key': api_key
     }
     response = requests.request("GET", url, headers=headers, data=payload)
-    print(response.text)
+    return response.json()
 
-#c3c84f2d-944e-428b-9918-b42c9af37d1f
+quotes = ['USD', 'BRL', 'EUR']
+
+def filtrar_quotes(origem, moeda):
+    datas = []
+    for m in moeda:
+        result = consultar_cotacao(origem,m)
+        datas.append(result)
+    return datas
+    
+
+def criar_df():
+    cotacoes = pd.DataFrame(filtrar_quotes('BTC',quotes))
+    print(cotacoes)
