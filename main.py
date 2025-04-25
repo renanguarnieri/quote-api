@@ -1,6 +1,6 @@
-from consulta import criar_df
+from consulta import main
 
 if __name__ == "__main__":
-    criar_df()
+    main()
     
 
