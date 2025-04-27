@@ -1,6 +1,6 @@
 # Cotação do Bitcoin em Tempo Real
 
-Projeto em Python que consulta a cotação do Bitcoin (BTC) em diversas moedas utilizando a API Coin.
+Projeto em Python que consulta a cotação do Bitcoin (BTC) em Real, Dólar e Euro utilizando a API Coin e inserindo em um banco PostgreSQL os registros retornados
 
 ## Como usar
 
@@ -23,7 +23,7 @@ Projeto em Python que consulta a cotação do Bitcoin (BTC) em diversas moedas u
     python main.py
     ```
 
-O script irá exibir a cotação do Bitcoin em Real, Dólar e Euro.
+O script irá exibir a cotação do Bitcoin em Real, Dólar e Euro e inserir no banco de dados.
 
 ## Requisitos
 
@@ -31,6 +31,7 @@ O script irá exibir a cotação do Bitcoin em Real, Dólar e Euro.
 - requests (instalado com `requirements.txt`)
 - python-dotenv (instalado com `requirements.txt`)
 - pandas (instalado com `requirements.txt`)
+- psycopg2 (instalado com `requirements.txt`)
 
 
 
