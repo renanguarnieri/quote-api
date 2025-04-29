@@ -32,6 +32,6 @@ O script irá exibir a cotação do Bitcoin em Real, Dólar e Euro e inserir no 
 - python-dotenv (instalado com `requirements.txt`)
 - pandas (instalado com `requirements.txt`)
 - psycopg2 (instalado com `requirements.txt`)
-
+- Banco de dados PostgreSQL
 
 
